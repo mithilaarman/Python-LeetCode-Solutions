@@ -1,0 +1,16 @@
+class Solution:
+  def isPalindrome(self, x: int) -> bool:
+    # Base condition
+    if x < 0:
+      return False
+      
+    # This will store the reverse of the number
+    y = 0
+    # Store the number in a variable
+    temp = x
+    
+    while temp:
+      y = (y * 10) + (temp % 10)
+      temp //= 10
+    
+    return x == y
